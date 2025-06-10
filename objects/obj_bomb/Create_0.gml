@@ -1,2 +1,2 @@
-alarm_set(0,20);
-
+alarm_set(1,40);
+// (index of alarm, frames until it appears?)

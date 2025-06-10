@@ -19,13 +19,45 @@ alarm_set(0,20);
 - ADD another enemy similar to `obj_villain` and make it spawn in different locations
 ![image](https://github.com/user-attachments/assets/3e53a55f-9669-4d66-bb2b-43c5bfb2f36f)
 
-## TASK 2: Make a menu and game over room
+## TASK 2: Make a menu and game over room with functioning buttons
 ### Steps
-1) None good luck
+1) make two rooms `Menu` and `GameOver`
+2) add start and exit buttons with sprites and objects for the `Menu` room (dont forget to drag and drop the objects to the `Menu` room)
+3) do the same but for the `GameOver` room
+4) in the `obj_button_end` add event named `Left Pressed` then add 
+```bash
+game_end();
+```
+5) in the `obj_button_start` add event named `Left Pressed` then add
+```bash
+room_goto(Level1);
+```
+6) to go to the `GameOver` room when the player gets hit add
+```bash
+room_goto(GameOver);
+```
 ![image](https://github.com/user-attachments/assets/d9acd6c6-b8b0-4611-aa94-61d0c55c420d)
 ![image](https://github.com/user-attachments/assets/0b85e6de-abf6-4673-a537-6e2354e030fe)
 
+## Optional if you want to flex on Sir Icha
+- Add this code to the object spaceship in the steps
+- Put comments with explanation on what each line does
+```bash
+//
+//https://manual.gamemaker.io/lts/en/index.htm#t=GameMaker_Language%2FGML_Overview%2FBasic_Code_Structure.htm
+//
+function print(){
+    var _str = "";
 
-## TASK 3: Make a chess game
+    for (var i = 0; i < argument_count; i ++)
+    {
+        _str += string(argument[i]);
+    }
 
-## TASK 4: Make a AAA game
+    show_debug_message(_str);
+}
+
+print(index);
+index++;
+```
+## END
