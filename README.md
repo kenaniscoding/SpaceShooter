@@ -19,7 +19,7 @@ alarm_set(0,20);
 - ADD another enemy similar to `obj_villain` and make it spawn in different locations
 ![image](https://github.com/user-attachments/assets/3e53a55f-9669-4d66-bb2b-43c5bfb2f36f)
 
-## TASK 2: Make a menu and game over room with functioning buttons
+## TASK 2.1: Make the menu and game over room with functioning buttons
 ### Steps
 1) make two rooms `Menu` and `GameOver`
 2) add start and exit buttons with sprites and objects for the `Menu` room (dont forget to drag and drop the objects to the `Menu` room)
@@ -38,8 +38,7 @@ room_goto(GameOver);
 ```
 ![image](https://github.com/user-attachments/assets/d9acd6c6-b8b0-4611-aa94-61d0c55c420d)
 ![image](https://github.com/user-attachments/assets/0b85e6de-abf6-4673-a537-6e2354e030fe)
-
-## Optional if you want to flex on Sir Icha
+## TASK 2.2: Introduce the Terminal
 - Add this code to the object spaceship in the steps
 - Put comments with explanation on what each line does
 ```bash
@@ -47,13 +46,16 @@ room_goto(GameOver);
 //https://manual.gamemaker.io/lts/en/index.htm#t=GameMaker_Language%2FGML_Overview%2FBasic_Code_Structure.htm
 //
 function print(){
+    // initialize the string variable
     var _str = "";
-
+    // the for loop
     for (var i = 0; i < argument_count; i ++)
     {
+        // set the string variable to the index of the argument
+        // note that the argument is an array 
         _str += string(argument[i]);
     }
-
+    // display the message
     show_debug_message(_str);
 }
 
